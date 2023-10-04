@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+:root {
+    --first-background-color: hsl(252, 100%, 67%);
+    --second-background-color: hsl(241, 81%, 54%);
+    --first-circle-color: hsla(256, 72%, 46%, 1);
+    --second-circle-color: hsla(241, 72%, 46%, 0);
+    --white-color: hsl(0, 0%, 100%);
+    --pale-blue-color: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%); 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Hanken';
+}
+
+.main_container {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+
+.score_container {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    background-color: var(--first-background-color);
+    background-image: linear-gradient(var(--first-background-color), var(--second-background-color));
+    opacity: 1;
+}
