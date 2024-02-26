@@ -1,39 +1,199 @@
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
 :root {
-    --first-background-color: hsl(252, 100%, 67%);
-    --second-background-color: hsl(241, 81%, 54%);
-    --first-circle-color: hsla(256, 72%, 46%, 1);
-    --second-circle-color: hsla(241, 72%, 46%, 0);
-    --white-color: hsl(0, 0%, 100%);
-    --pale-blue-color: hsl(221, 100%, 96%);
-    --light-lavender: hsl(241, 100%, 89%);
-    --dark-gray-blue: hsl(224, 30%, 27%); 
+  --first-background-color: hsl(252, 100%, 67%);
+  --second-background-color: hsl(241, 81%, 54%);
+  --first-circle-color: hsla(256, 72%, 46%, 1);
+  --second-circle-color: hsla(241, 72%, 46%, 0);
+  --white-color: hsl(0, 0%, 100%);
+  --pale-blue-color: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Hanken';
+  font-family: 'Hanken-Grotesk', sans-serif;
+  background-color: aliceblue;
 }
 
 .main_container {
-    display: block;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  width: 50%;
+  gap: 40px;
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
+  top: 50px;
+  margin-left: 25%;
+  height: 80vh;
+  opacity: 1;
 }
 
 .score_container {
-    display: block;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    position: relative;
-    background-color: var(--first-background-color);
-    background-image: linear-gradient(var(--first-background-color), var(--second-background-color));
-    opacity: 1;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--first-background-color);
+  background-image: linear-gradient(
+    var(--first-background-color),
+    var(--second-background-color)
+  );
+  width: 50%;
+  opacity: 1.2;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.results {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: var(--pale-blue-color);
+  opacity: 0.9;
+  position: relative;
+  top: 40px;
+  font-weight: 700;
+}
+
+.rounded_div {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  width: 160px;
+  height: 160px;
+  background-image: linear-gradient(
+    hsla(256, 72%, 46%, 1),
+    hsla(241, 72%, 46%, 0)
+  );
+  position: relative;
+  top: 5rem;
+  margin: auto;
+  border-radius: 50%;
+}
+
+.score_header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 4.5rem;
+  font-weight: 800;
+}
+.rounded_div p {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  color: var(--white-color);
+  font-weight: 700;
+  font-size: 15px;
+  opacity: 0.6;
+}
+.score_text {
+  margin-top: 90px;
+}
+.header1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white-color);
+  font-size: 2rem;
+  padding: 10px 0px;
+}
+.score_text p {
+  color: var(--white-color);
+  font-weight: 600;
+  opacity: 0.6;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+.summary_container {
+  margin-top: 40px;
+}
+
+.summary_container h3 {
+  font-size: 1.5em;
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+
+.sub_div {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  border-radius: 4px;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 15px;
+  margin-top: 10px;
+}
+
+.red {
+  background-color: hsl(0, 57%, 97%);
+  color: red;
+}
+
+.sub_text {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 7px;
+}
+
+.sub_text img {
+  width: 24px;
+  height: 24px;
+}
+
+.sub_text p {
+  font-weight: 600;
+}
+
+.left {
+  display: flex;
+  position: relative;
+  left: 10%;
+  color: black;
+  font-weight: 900;
+  align-items: center;
+  justify-content: center;
+}
+
+.yellow {
+  background-color: hsl(36, 50%, 96%);
+  color: hsl(39, 100%, 56%);
+}
+
+.green {
+  background-color: hsl(158, 52%, 96%);
+  color: hsl(166, 100%, 37%);
+}
+
+.blue {
+  background-color: hsl(234, 71%, 97%);
+  color: hsl(234, 85%, 45%);
+}
+
+button {
+  width: 100%;
+  margin-top: 40px;
+  height: 50px;
+  color: white;
+  background-color: hsl(224, 30%, 27%);
+  border: none;
+  outline: none;
+  font-weight: 800;
+  font-size: 18px;
+  border-radius: 30px;
 }
